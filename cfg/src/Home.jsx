@@ -7,7 +7,7 @@ import './Landing.css'
 export const Home = () => {
   return (
     <div>
-        <Header />
+      <Header />
       <Landing />
       <Footer />
     </div>
