@@ -1,16 +1,25 @@
 import './App.css';
-import Header from './header';
-import Footer from './footer';
-import Landing from './Landing';
-import './Landing.css'
+
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Home } from './Home';
+import Login from './login';
+import Signin from './signin';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Landing />
-      <Footer />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signin" element={<Signin/>}/>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
