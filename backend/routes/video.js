@@ -2,9 +2,10 @@ const express=require("express");
 const route=express.Router()
 
 //importing the controllers
-const {createVideo}=require("../controller/video")
+const {createVideo,getVideoByTag}=require("../controller/video")
+
 //post request
 route.post("/createVideo",createVideo);
-route.post("/getVideo",)
+route.get("/getVideoByTag",getVideoByTag);
 
 module.exports = route 

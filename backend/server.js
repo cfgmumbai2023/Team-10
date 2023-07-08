@@ -3,7 +3,7 @@ const express=require('express');
 const app=express();
 const cors = require("cors");
 const signupRoutes = require("./routes/signup");
-const createVideo=require("./routes/createvideo");
+const createVideo=require("./routes/video");
 const cookieParser = require("cookie-parser");
 //load config from env file
 require("dotenv").config();

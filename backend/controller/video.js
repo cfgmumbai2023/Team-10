@@ -28,32 +28,32 @@ exports.createVideo =async (req,res)=>{
     })
   }
 }
-// exports.getVideoByTag= async (req,res)={
-//   try{
-//     const tags = req.query.tags;
-//     if (!tags) {
-//         return res.status(400).json({ error: 'Tags parameter is required' });
-//     }
 
-//   }
-//   catch(err){
+//controller 2
+exports.getVideoByTag= async (req,res)=>{
+  try{
+    const {tags} = req.body;
+    if (!tags) {
+        return res.status(400).json(
+          { 
+            message: 'Tags parameter is required' }
+          );
+    }
+    const tagList = tags.split(',');
+    const videos = await Video.find({ tags: { $all: tagList } });
+   return res.status(400).json({
+      success:true,
+      message:"Videos fetched succefully",
+      videos
+    });
+  }
+  catch(err){
+    console.error('Error retrieving videos by tags:', err);
+    return res.status(500).json(
+      { 
+        success:false,
+        error: 'Internal server error' }
+      );
+  }
+}
 
-//   }
-// }
-
-// app.get('/videos/by-tags', async (req, res) => {
-//     const tags = req.query.tags;
-//     if (!tags) {
-//         return res.status(400).json({ error: 'Tags parameter is required' });
-//     }
-
-//     const tagList = tags.split(',');
-
-//     try {
-//         const videos = await Video.find({ tags: { $in: tagList } });
-//         res.json(videos);
-//     } catch (error) {
-//         console.error('Error retrieving videos by tags:', error);
-//         res.status(500).json({ error: 'Internal server error' });
-//     }
-// });
