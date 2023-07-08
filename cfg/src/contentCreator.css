@@ -1,0 +1,47 @@
+.app {
+    display: flex;
+  }
+  
+  .form-section {
+    flex: 1;
+    padding: 20px;
+    background-color: lightgray;
+  }
+  
+  .profile-section {
+    flex: 1;
+    padding: 20px;
+    background-color: lightblue;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .profile {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
