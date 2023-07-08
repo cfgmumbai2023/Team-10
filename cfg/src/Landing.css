@@ -1,0 +1,21 @@
+*{
+    background-color: rgb(9, 202, 202);
+}
+h1,h2{
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: 40px;
+}
+.about-content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size: small;
+}
+.member{
+    border-radius: 50%;
+    float: left; 
+    display: inline;
+    padding:12px;
+    margin:12px;
+}
