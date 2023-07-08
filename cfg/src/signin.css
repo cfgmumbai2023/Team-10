@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    background-color: white;
   }
   
   .ssContainer {
@@ -23,8 +24,11 @@
   .ssInput{
     height: 30px;
     padding: 10px;
+    background-color:white
   }
-  
+  .ssContainer>div{
+    background-color: rgba(0, 0, 0, 0.613);
+  }
   .ssButton {
     border: none;
     padding: 10px 20px;
