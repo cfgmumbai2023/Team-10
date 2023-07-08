@@ -5,15 +5,23 @@
     padding: 10px;
     justify-content: space-around;
   }
-  
+
+  .formStyle{
+    display: flex;
+    margin: 0px 10px;
+  }
+  .searchButton{
+    margin: 0px 14px;
+  }
   .logo {
     height: 70px;
     width: 70px;
   }
   
-  .search-bar {
+  .searchBar {
     display: flex;
     align-items: center;
+    margin: 0px 10px
   }
   
   .search-input {
@@ -30,9 +38,13 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin: 0px 10px
   }
   
   .search-button:hover {
     background-color: #555;
+  }
+  .addingSpacing {
+    margin: 0px 10px;
   }
   
