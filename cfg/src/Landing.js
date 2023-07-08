@@ -15,14 +15,14 @@ const Landing = () => {
         <h2>Our Work</h2>
         <div className="members-container">
           <div className="member">
-            <img class="images" src="https://rkssngo.org/wp-content/uploads/2022/09/blog7.jpg" alt="work 1" />
+            <img class="images" src="https://s01.sgp1.digitaloceanspaces.com/large/831399-53243-wblpdgsmnv-1489106683.jpg" alt="work 1" />
             <h3>Mission Jeet</h3>
-            <p>RKSSNGO is co-founder of an alliance of all-India NGOs in education and skilling. The first meeting of the alliance was held on 23-01-2023, which is Swami Bramhanandaji’s janma tithi as well as Subhash Chandra Bose’s birth anniversary. A dozen NGOs have come together to form this all-India alliance and have chosen its name as JEET. </p>
+            <p class="para">RKSSNGO is co-founder of an alliance of all-India NGOs in education and skilling. The first meeting of the alliance was held on 23-01-2023, which is Swami Bramhanandaji’s janma tithi as well as Subhash Chandra Bose’s birth anniversary. A dozen NGOs have come together to form this all-India alliance and have chosen its name as JEET. </p>
           </div>
           <div className="member">
-            <img class="images" src="https://rkssngo.org/wp-content/uploads/2021/01/blog6.jpg" alt="work 2" />
+            <img class="images" src="https://iluminasi.com/img/upload/rss-ngo-pemerintah-india-bjp.jpg" alt="work 2" />
             <h3>Satvva Success</h3>
-            <p>Sattva is a tailor -artisan collective seeded and supported by RKSS along with AOF, Ambit Oditi Foundation, Mumbai. It’s success depends on how well this collective will grow and self-sustain too. SattvaIndia produces great products either from upcycled or recycled fabric, or from handmade cottons. We have a shop at RKSS center and soon we will be going online.</p>
+            <p class="para">Sattva is a tailor -artisan collective seeded and supported by RKSS along with AOF, Ambit Oditi Foundation, Mumbai. It’s success depends on how well this collective will grow and self-sustain too. SattvaIndia produces great products either from upcycled or recycled fabric, or from handmade cottons. We have a shop at RKSS center and soon we will be going online.</p>
             
           </div>
         </div>
