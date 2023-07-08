@@ -1,0 +1,26 @@
+h1,h2{
+    text-align:center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: 40px;
+}
+.about-content{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:black;
+    font-size: small;
+}
+.member{
+    border-radius: 50%;
+    float: left; 
+    display: inline;
+    padding:30px;
+     margin:10px;  
+ 
+ 
+}
+.para{
+    /* width:700px; */
+    text-align: center;
+    /* width:900px; */
+}
+
