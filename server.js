@@ -4,14 +4,14 @@ const app=express();
 
 //load config from env file
 require("dotenv").config();
-const PORT=process.env.PORT || 5000;
+const PORT=process.env.PORT || 3000;
 //middleware to parse json request body 
 app.use(express.json());
 
 
 //server start
-app.listen(PORT,()=>{
-    console.log(`Server started at ${PORT}`);
+app.listen(8000,()=>{
+    console.log(`Server started at 8000`);
 })
 
 //connect  to the database
