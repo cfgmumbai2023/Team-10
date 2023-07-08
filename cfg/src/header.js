@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import { Navbar, Nav, FormControl, Button, Form, Dropdown } from 'react-bootstrap';
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -30,6 +30,9 @@ const Header = () => {
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Collapse>
+        <Link to="/login"><Button >Login</Button></Link>
+        <Link to="/signin"><Button >Signin</Button></Link>
+        
       </Navbar>
     );
   };
