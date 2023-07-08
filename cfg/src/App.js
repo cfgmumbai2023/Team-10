@@ -20,6 +20,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/signin" element={<Signin/>}/>
       <Route path="/student" element={<StudentSRP/>}/>
+
     </Routes>
   </BrowserRouter>
   );
