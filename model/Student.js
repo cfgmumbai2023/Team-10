@@ -13,11 +13,12 @@ const userSchema=new mongoose.Schema(
             required:true,
         },
         firstName: {
-            
-			
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
 		},
 		lastName: {
-			
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
 		},
 
 
