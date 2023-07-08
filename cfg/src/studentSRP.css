@@ -1,0 +1,62 @@
+.video-page {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filters {
+    flex-basis: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .filters h2 {
+    margin-top: 0;
+  }
+  
+  .filters ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .filters li {
+    margin-bottom: 10px;
+  }
+  
+  .video-cards {
+    flex-basis: 60%;
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .video-cards h2 {
+    margin-top: 0;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .profile-dashboard {
+    flex-basis: 20%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  .profile-dashboard h2 {
+    margin-top: 0;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile h3 {
+    margin-top: 0;
+  }
+  
+  .profile p {
+    margin-bottom: 5px;
+  }
+  
