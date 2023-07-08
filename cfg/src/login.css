@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    background-color: white;
   }
   
   .lContainer {
@@ -18,11 +19,13 @@
     border-bottom-right-radius: 50px;
     background-color: rgba(0, 0, 0, 0.613);
     z-index: 999;
+  
   }
   
   .lInput{
     height: 30px;
     padding: 10px;
+    background-color:white
   }
   
   .lButton {
