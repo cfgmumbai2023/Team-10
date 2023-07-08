@@ -9,63 +9,77 @@ const Signin = () => {
  const [role,setRole]=useState("")
  const navigate=useNavigate()
  const handleClick = () => {
-  navigate(`/${role}`);
+  if (pass===cpass){
+    navigate(`/${role}`);
+  } else {
+    navigate(`/`);
+  }
+ 
 };
+const [pass,setPass]=useState("");
+const [cpass,setCPass]=useState("");
 
 
-const options = [
-  'student', 'creator'
-];
-const defaultOption = options[0];
+
+
   return (
     <div className="studentsign">
       
       <div className="ssContainer">
-        <div>First Name</div>
         <input
           type="text"
-          placeholder="firstName"
+          placeholder="First Name"
           id="firstName"
         
           className="ssInput"
         />
-         <div>Last Name</div>
          <input
           type="text"
-          placeholder="lastName"
+          placeholder="Last Name"
           id="lastName"
         
           className="ssInput"
         />
-        <div>Email</div>
          <input
           type="text"
-          placeholder="email"
+          placeholder="Email"
           id="email"
         
           className="ssInput"
         />
-        <div>Phone</div>
+         <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          onChange={(e)=>{setPass(e.target.value)}}
+          className="ssInput"
+        />
+         <input
+          type="password"
+          placeholder="Confirm Password"
+          id="confirmPassword"
+          onChange={(e)=>{setCPass(e.target.value)}}
+          className="ssInput"
+        />
+
         <input
           type="text"
-          placeholder="phone"
+          placeholder="Phone"
           id="phone"
     
           className="ssInput"
         />
-        <div>Role</div>
         <input
           type="text"
-          placeholder="phone"
+          placeholder="Student or Creator"
           id="phone"
           onChange={(e) => setRole(e.target.value)}
           className="ssInput"
         />
         
-         <div>Organisation Name</div>
         <input
           type="text"
-          placeholder="organisation"
+          placeholder="Organisation Name"
           id="organisation"
          
           className="ssInput"
