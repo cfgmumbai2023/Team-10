@@ -8,4 +8,4 @@ const {auth}=require("../middleware/authent");
 route.post("/signup",signup);
 route.post("/login",login);
 
-module.exports = route
+module.exports = route 

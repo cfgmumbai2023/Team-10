@@ -15,7 +15,7 @@ const videoSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  class: {
+  standard: {
     type: Number,
     required: true,
   },
@@ -23,10 +23,14 @@ const videoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  languages: {
-    type: [String],
+  languages: [{
+    type: String,
     required: true,
-  },
+  }],
+  tags:[{
+    type:String,
+    require:true,
+  }]
 });
 
 module.exports = mongoose.model("Video", videoSchema);

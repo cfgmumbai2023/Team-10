@@ -3,6 +3,7 @@ const express=require('express');
 const app=express();
 const cors = require("cors");
 const signupRoutes = require("./routes/signup");
+const createVideo=require("./routes/createvideo");
 const cookieParser = require("cookie-parser");
 //load config from env file
 require("dotenv").config();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 // 	})
 // )
 app.use("/api/v1", signupRoutes);
+app.use("/api/v1",createVideo);
 
 //server start
 app.listen(8000,()=>{
