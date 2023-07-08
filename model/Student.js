@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-const userSchema=new mongoose.Schema(
+const studentSchema=new mongoose.Schema(
     {
         id_Number:{
             type:Number
@@ -26,4 +26,4 @@ const userSchema=new mongoose.Schema(
         }
 );
 
-module.exports=mongoose.model("User",userSchema);
+module.exports=mongoose.model("Student",studentSchema);
