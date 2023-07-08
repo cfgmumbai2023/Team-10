@@ -4,7 +4,11 @@ const videoSchema = new mongoose.Schema({
   videoUrl: {
     type: String,
     required: true,
-    trim: true,
+    unique: true,
+  },
+  videoName:{
+    type:String,
+    required:true,
   },
   organisationName: {
     type: String,
@@ -14,7 +18,10 @@ const videoSchema = new mongoose.Schema({
   class: {
     type: Number,
     required: true,
-    trim: true,
+  },
+  subject: {
+    type: String,
+    required: true,
   },
   languages: {
     type: [String],
