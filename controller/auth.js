@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 const User = require("../model/User");
 const jwt = require("jsonwebtoken");
 
-const mailSender = require("../utils/mailSender");
+// const mailSender = require("../utils/mailSender");
 
 require("dotenv").config();
 
@@ -30,9 +30,11 @@ exports.signup = async (req, res) => {
             !accountType||
             !organizationName	
 		) {
+			console.log("no data found");
 			return res.status(403).send({
 				success: false,
 				message: "All Fields are required",
+				
 			});
 		}
 		// Check if password and confirm password match
@@ -60,7 +62,6 @@ exports.signup = async (req, res) => {
 			firstName,
 			lastName,
 			email,
-			contactNumber,
 			password: hashedPassword,
 			accountType: accountType,
 			image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`,
@@ -138,7 +139,6 @@ exports.login = async (req, res) => {
 		}
 	} catch (error) {
 		console.error(error);
-		// Return 500 Internal Server Error status code with error message
 		return res.status(500).json({
 			success: false,
 			message: `Login Failure Please Try Again`,

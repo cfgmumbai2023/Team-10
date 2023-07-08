@@ -59,24 +59,25 @@ exports.isStudent = async (req, res, next) => {
     })
  }
 }
-
-
 //isNGO
 exports.isNGO = async (req, res, next) => {
     try{
            if(req.user.accountType !== "NGO") {
-               return res.status(401).json({
-                   success:false,
-                   message:'This is a protected route for Creator only',
-               });
-           }
-           next();
+            return res.json({
+                success:false,
+                message:"This is a protected route for NGO only",
+            })
+       }
+        return res.json({
+            success:true,
+            message:"verified",
+        })
     }
-    catch(error) {
-       return res.status(500).json({
-           success:false,
-           message:'User role cannot be verified, please try again'
-       })
+    catch(err){
+        return res.status(500).json({
+            success:false,
+            message:'User role cannot be verified, please try again'
+        })
     }
    }
 
