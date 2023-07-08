@@ -29,3 +29,19 @@ exports.createVideo =async (req,res)=>{
 
   }
 }
+// app.get('/videos/by-tags', async (req, res) => {
+//   const tags = req.query.tags;
+//   if (!tags) {
+//       return res.status(400).json({ error: 'Tags parameter is required' });
+//   }
+
+//   const tagList = tags.split(',');
+
+//   try {
+//       const videos = await Video.find({ tags: { $in: tagList } });
+//       res.json(videos);
+//   } catch (error) {
+//       console.error('Error retrieving videos by tags:', error);
+//       res.status(500).json({ error: 'Internal server error' });
+//   }
+// });
