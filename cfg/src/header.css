@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+}
+.logo {
+    height: 70px;
+    width: 70px;
+    padding: 10px 60px;
+}
+
+.ngoName {
+    padding: 28px;
+}
+
+.searchBar{
+    display: flex;
+}

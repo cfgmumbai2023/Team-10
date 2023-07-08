@@ -1,11 +1,13 @@
 import React from 'react';
+import './header.css';
 import { Navbar, Nav, FormControl, Button, Form, Dropdown } from 'react-bootstrap';
 
 
 const Header = () => {
     return (
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React App</Navbar.Brand>
+      <Navbar bg="light" className='nav'>
+        <img src='https://rkssngo.org/wp-content/uploads/2021/02/cropped-logo-rkss-org.png' alt='RKSS' className='logo' />
+        <Navbar.Brand className='ngoName'>RKSS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -14,7 +16,7 @@ const Header = () => {
             {/* Add more navigation links here */}
           </Nav>
           <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <FormControl type="text" placeholder="Search" className="searchBar" />
             <Button variant="outline-success">Search</Button>
           </Form>
           <Dropdown>
