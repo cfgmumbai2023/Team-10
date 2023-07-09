@@ -14,6 +14,7 @@ import VideoPlayer from './moderatorReview';
 import ModeratorProfile from './ModeratorProfile';
 import CreatorForm from './contentCreator';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function App() {
       <Route path='/moderator' element={<VideoPlayer/>}/>
       <Route path='/moderatorProfile' element={<ModeratorProfile/>}/>
       <Route path='/creator' element={<CreatorForm/>}/>
+     
 
     </Routes>
   </BrowserRouter>

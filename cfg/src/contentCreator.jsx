@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import './contentCreator.css';
 
@@ -8,11 +10,32 @@ const FormSection = () => {
   const [topic, setTopic] = useState('');
   const [tags, setTags] = useState('');
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can access the form input values (url, className, subject, topic, tags) here
-    console.log(url, className, subject, topic, tags);
+    try {
+      const response = await fetch('http://localhost:3000/api/v1/createVideo', {
+      
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          videoUrl: url,
+          videoName: topic,
+          standard: className,
+          subject: subject,
+          tags: tags.split(',').map(tag => tag.trim()), // Split the tags string into an array and trim each tag
+        }),
+      });
+  
+      if (response.ok) {
+        console.log('Video uploaded successfully');
+      } else {
+        console.error('Error uploading video');
+      }
+    } catch (error) {
+      console.error('Error uploading video:', error);
+    }
   };
 
   return (
@@ -66,7 +89,7 @@ const FormSection = () => {
             id="tags"
             value={tags}
             onChange={(e) => setTags(e.target.value)}
-            placeholder="Enter Tags"
+            placeholder="Enter Tags (comma-separated)"
           />
         </div>
         <button type="submit">Submit</button>

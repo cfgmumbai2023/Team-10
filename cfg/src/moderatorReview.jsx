@@ -1,5 +1,6 @@
 import React from 'react';
 import './moderatorReview.css';
+import { Link } from 'react-router-dom';
 
 const VideoPlayer = () => {
   return (
@@ -16,21 +17,34 @@ const VideoPlayer = () => {
         ></iframe>
       </div>
       <div className="content-section">
-        <h2>Text Section</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2>Add tags on video</h2>
+        {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+        <textarea rows="10"
+                  cols="150"
+                  placeholder="Description of video">
+        </textarea>
       </div>
       <div className="comment-section">
-        <h2>Comment Section</h2>
-        <div className="comment">Comment 1</div>
+        <h2>Moderator comments</h2>
+        {/* <div className="comment">Comment 1</div>
         <div className="comment">Comment 2</div>
-        <div className="comment">Comment 3</div>
+        <div className="comment">Comment 3</div> */}
+        <textarea rows="10"
+                  cols="150"
+                  placeholder="comments on video">
+        </textarea>
       </div>
       <div className="binary-selection">
-        <h2>Binary Selection</h2>
-        <input type="radio" id="option1" name="binary" />
-        <label htmlFor="option1">Option 1</label>
-        <input type="radio" id="option2" name="binary" />
-        <label htmlFor="option2">Option 2</label>
+        <h2>Approvation</h2>
+        
+         <button id="bt1" type="approve" value="approve">
+    Approve
+  </button>
+  <Link to="/moderatorProfile"><button id2="bt2" type="reject" value="reject" href="">
+    Reject
+  </button></Link>
+   
+  {/* <button>Approved</button> &nbsp;&nbsp;&nbsp; <button>Reject</button> */}
       </div>
     </div>
   );
