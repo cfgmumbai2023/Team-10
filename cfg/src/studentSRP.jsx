@@ -1,8 +1,8 @@
-
 import './studentSRP.css';
 import React, { useState,createContext } from 'react';
 import { Videocard } from './videocard';
-
+import Header from './header';
+import Footer from './footer';
 
 const StudentSRP = () => {
 const checked=[0,0,0]
@@ -15,6 +15,8 @@ const checked=[0,0,0]
   const vid=["vid1","vid2","vid3","vid4"];
  
   return (
+    <div>
+      <Header />
     <div className="video-page">
       <div className="filters">
         <h2>Mock Filters</h2>
@@ -57,9 +59,11 @@ const checked=[0,0,0]
         <div className="profile">
           <h3>User Name</h3>
           <p>Location: City, Country</p>
-          <p>Followers: 100</p>
+          <p>Progress Analysis</p>
         </div>
       </div>
+    </div>
+    <Footer />
     </div>
   );
 };

@@ -23,13 +23,12 @@
   }
   
   .card {
-    width: 150px;
-    height: 150px;
+    width: 94%;
+    height: 110px;
     background-color: white;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
     font-size: 18px;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
