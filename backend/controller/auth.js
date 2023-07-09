@@ -11,6 +11,8 @@ require("dotenv").config();
 exports.signup = async (req, res) => {
 	try {
 		// Destructure fields from the request body
+		console.log("SIGN IN DATA");
+		console.log(JSON.stringify(req.body))
 		const {
 			firstName,
 			lastName,
@@ -18,7 +20,7 @@ exports.signup = async (req, res) => {
 			password,
 			confirmPassword,
 			accountType,
-            organizationName,
+            organizationName,PhoneNumber
 		} = req.body;
 		// Check if All Details are there or not
 		if (
@@ -28,7 +30,7 @@ exports.signup = async (req, res) => {
 			!password ||
 			!confirmPassword ||
             !accountType||
-            !organizationName	
+            !organizationName	||!PhoneNumber
 		) {
 			console.log("no data found");
 			return res.status(403).send({
@@ -62,6 +64,8 @@ exports.signup = async (req, res) => {
 			firstName,
 			lastName,
 			email,
+			PhoneNumber,
+			organizationName,
 			password: hashedPassword,
 			accountType: accountType,
 			image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`,
@@ -70,6 +74,7 @@ exports.signup = async (req, res) => {
 		return res.status(200).json({
 			success: true,
 			user,
+			accountType: accountType,
 			message: "User registered successfully",
 		});
 	} catch (error) {
@@ -125,10 +130,18 @@ exports.login = async (req, res) => {
 				expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
 				httpOnly: true,
 			};
-			res.cookie("token", token, options).status(200).json({
+			// return res.status(200).json({
+			// 	success:true,
+			// 	message:"logged in succefully",
+			// 	accountType
+			// })
+	
+			return res.cookie("token", token, options).status(200).json({
+
 				success: true,
 				token,
 				user,
+				accountType: user.accountType,
 				message: `User Login Success`,
 			});
 		} else {

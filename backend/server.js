@@ -7,26 +7,24 @@ const createVideo=require("./routes/createvideo");
 const cookieParser = require("cookie-parser");
 //load config from env file
 require("dotenv").config();
-const PORT= 8000;
+const PORT= 3000;
 
 //connect  to the database
 const dbConnect=require("./config/db_connect");
 dbConnect();
 
-//middleware to parse json request body 
+//middleware to parse json request body
+
+app.use(cors()) 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(
-// 	cors({
-// 		origin:"http://localhost:8000",
-// 		credentials:true,
-// 	})
-// )
+
+// app.use(cors());
 app.use("/api/v1", signupRoutes);
 app.use("/api/v1",createVideo);
 
 //server start
-app.listen(8000,()=>{
+app.listen(3000,()=>{
     console.log(`Server started at 8000`);
 })
 

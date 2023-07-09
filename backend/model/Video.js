@@ -12,7 +12,6 @@ const videoSchema = new mongoose.Schema({
   },
   organisationName: {
     type: String,
-    required: true,
     trim: true,
   },
   standard: {
@@ -25,7 +24,6 @@ const videoSchema = new mongoose.Schema({
   },
   languages: [{
     type: String,
-    required: true,
   }],
   tags:[{
     type:String,
