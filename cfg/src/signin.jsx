@@ -10,7 +10,7 @@ const Signin = () => {
  const navigate=useNavigate()
  const handleClick = () => {
   if (pass===cpass){
-    navigate(`/${role}`);
+    navigate("/login");
   } else {
     navigate(`/`);
   }

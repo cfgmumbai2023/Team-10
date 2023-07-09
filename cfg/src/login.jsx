@@ -32,11 +32,12 @@
 
 import React, { useState } from 'react';
 import "./login.css";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate=useNavigate();
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -48,6 +49,10 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       // Make an API call to authenticate the user
+      if(email==="moderator@gmail.com"){
+        navigate("/moderatorProfile");
+       }
+      
       console.log('hi')
       const response = await fetch('http://localhost:3000/api/v1/login',{
         method: 'POST',
@@ -64,6 +69,13 @@ const Login = () => {
         // console.log('hi')
         const data = await response.json();
         const { token, user, accountType } = data;
+      
+       if(accountType==="NGO"){
+          navigate("/creator")
+       }else{
+           navigate("/student")
+       }
+     
         console.log('User logged in successfully');
         console.log('Account Type:', accountType);
         console.log('User logged in successfully');
