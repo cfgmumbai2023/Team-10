@@ -59,7 +59,7 @@ const checked=[0,0,0]
         <div className="profile">
           <h3>User Name</h3>
           <p>Location: City, Country</p>
-          <p>Progress Analysis</p>
+          <p>Progress</p>
         </div>
       </div>
     </div>
