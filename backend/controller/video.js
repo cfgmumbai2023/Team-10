@@ -88,7 +88,7 @@ exports.filter = async (req, res) => {
       return res.status(400).json({ error: 'Tags parameter is required' });
     }
 
-    const tagList = tags.split(',');
+    const tagList = tags.split(' ');
 
     try {
       const videos = await Video.find({ tags: { $in: tagList } });
