@@ -16,7 +16,7 @@ const Header = () => {
     </Form>
     <div>
       <Link to="/login"><Button className='addingSpacing'>Login</Button></Link>
-      <Link to="/signin"><Button >Signin</Button></Link>
+      <Link to="/signin"><Button >SignUp</Button></Link>
     </div>
     </header>
   );
