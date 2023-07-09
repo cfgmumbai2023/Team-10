@@ -2,6 +2,7 @@ import './studentSRP.css';
 import React, { useState,createContext } from 'react';
 import { Videocard } from './videocard';
 import Header from './header';
+import Footer from './footer';
 
 const StudentSRP = () => {
 const checked=[0,0,0]
@@ -58,10 +59,11 @@ const checked=[0,0,0]
         <div className="profile">
           <h3>User Name</h3>
           <p>Location: City, Country</p>
-          <p>Followers: 100</p>
+          <p>Progress Analysis</p>
         </div>
       </div>
     </div>
+    <Footer />
     </div>
   );
 };
