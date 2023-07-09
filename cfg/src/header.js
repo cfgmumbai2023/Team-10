@@ -8,6 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <img src='https://rkssngo.org/wp-content/uploads/2021/02/cropped-logo-rkss-org.png' className="logo" alt='RKSS' />
+      <h1>DHRISHTI</h1>
     <Form className='formStyle'>
         <FormControl type="text" placeholder="Search" className="searchBar" />
         <Button className='SearchButton'
