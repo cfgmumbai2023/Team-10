@@ -6,8 +6,9 @@ const Creator=require('../model/Creator')
 exports.createVideo = async (req, res) => {
   try {
     //validation
-    const { videoUrl, videoName, standard, subject, organisationName, tags, languages } = req.body
-    if (!videoUrl || !videoName || !standard || !subject || !tags || !languages) {
+    console.log(JSON.stringify(req.body))
+    const { videoUrl,videoName,standard, subject,tags} = req.body
+    if (!videoUrl || !videoName || !standard || !subject || !tags) {
       return res.json({
         success: false,
         message: "Fill all the Required fields"
@@ -17,7 +18,7 @@ exports.createVideo = async (req, res) => {
     //saving the video in db
     // await Video.create({videoUrl,videoName,standard,subject,organisationName,tags,languages})
     const videos=new Video({videoUrl,standard,subject,videoName,tags});
-     await videos.save();
+    await videos.save();
     
     console.log('Video saved successfully');
     // const creator=new Creator({courseCreated:videoName,URL:videoUrl});
