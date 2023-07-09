@@ -91,7 +91,7 @@ exports.filter = async (req, res) => {
     const tagList = tags.split(' ');
 
     try {
-      const videos = await Video.find({ tags: { $in: tagList } });
+      const videos = await Video.find({ tags: { $all: tagList } });
       res.json(videos);
     } catch (error) {
       console.error('Error retrieving videos by tags:', error);
