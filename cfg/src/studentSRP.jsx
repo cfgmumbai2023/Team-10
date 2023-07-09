@@ -1,33 +1,57 @@
-import React from 'react';
+
 import './studentSRP.css';
+import React, { useState,createContext } from 'react';
+import { Videocard } from './videocard';
+
 
 const StudentSRP = () => {
+const checked=[0,0,0]
+
+ const handleCheckboxChange = (i) => {
+ 
+    checked[i]=1-checked[i];
+  };
+  const filter=["latestby","rating","content-length"]
+  const vid=["vid1","vid2","vid3","vid4"];
+ 
   return (
     <div className="video-page">
       <div className="filters">
         <h2>Mock Filters</h2>
-        <ul>
-          <li>Filter 1</li>
-          <li>Filter 2</li>
-          <li>Filter 3</li>
-          <li>Filter 4</li>
-        </ul>
+      
+{filter.map((i)=>(<label>
+  <input
+    type="checkbox"
+    
+    checked={checked[i]}
+    onChange={handleCheckboxChange(i)}
+  />
+ {i}
+
+</label>))
+  
+}
+       
+        
+
       </div>
-      <div className="video-cards">
+
+      <div className="cartcontainer">
         <h2>Video Cards</h2>
-        <div className="card">
-          <h3>Video 1</h3>
-          <p>Description of Video 1</p>
+        <div> {vid.map((element,index)=> ( <div className="card" >
+          
+          <Videocard key={index} myProp={element}  />
+        
+       
+          </div>))}</div>
+    
         </div>
-        <div className="card">
-          <h3>Video 2</h3>
-          <p>Description of Video 2</p>
-        </div>
-        <div className="card">
-          <h3>Video 3</h3>
-          <p>Description of Video 3</p>
-        </div>
-      </div>
+      
+     
+
+      
+          
+     
       <div className="profile-dashboard">
         <h2>Profile Dashboard</h2>
         <div className="profile">
